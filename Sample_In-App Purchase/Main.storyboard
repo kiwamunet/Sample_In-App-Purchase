@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Sample_In_App_Purchase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ro-xP-MzU">
+                                <rect key="frame" x="93" y="269" width="135" height="30"/>
+                                <state key="normal" title="アイテムを購入する">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="respondToBuyButtonClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aUF-ps-171"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmE-6g-dJX">
+                                <rect key="frame" x="90" y="352" width="141" height="30"/>
+                                <state key="normal" title="UserDefaultログ出力">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logUserDefaults:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hrg-gB-Lzf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHj-88-nx3">
+                                <rect key="frame" x="105" y="307" width="111" height="30"/>
+                                <state key="normal" title="UserDefault削除">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="delUserDefaults" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d7y-ql-KWM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FHj-88-nx3" firstAttribute="top" secondItem="0Ro-xP-MzU" secondAttribute="bottom" constant="8" symbolic="YES" id="2Z6-eC-59n"/>
+                            <constraint firstAttribute="centerY" secondItem="0Ro-xP-MzU" secondAttribute="centerY" id="6RL-ab-7WG"/>
+                            <constraint firstAttribute="centerX" secondItem="0Ro-xP-MzU" secondAttribute="centerX" id="8xH-lS-71b"/>
+                            <constraint firstItem="jmE-6g-dJX" firstAttribute="centerX" secondItem="0Ro-xP-MzU" secondAttribute="centerX" id="Txd-C6-iyG"/>
+                            <constraint firstItem="FHj-88-nx3" firstAttribute="centerX" secondItem="jmE-6g-dJX" secondAttribute="centerX" constant="-15" id="bOH-2i-gPD"/>
+                            <constraint firstItem="FHj-88-nx3" firstAttribute="centerX" secondItem="jmE-6g-dJX" secondAttribute="centerX" id="kC0-Jo-GJA"/>
+                            <constraint firstItem="jmE-6g-dJX" firstAttribute="top" secondItem="FHj-88-nx3" secondAttribute="bottom" constant="15" id="noF-cP-8TS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bOH-2i-gPD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="respondToBuyButton" destination="0Ro-xP-MzU" id="PTV-LK-L7H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
